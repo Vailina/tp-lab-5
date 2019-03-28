@@ -1,4 +1,5 @@
-#pragma once
+#ifndef LAB5_STUDENT_H
+#define LAB6_STUDENT_H
 #include <iostream>
 #include <string>
 #include <vector>
