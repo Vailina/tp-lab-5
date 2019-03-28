@@ -6,7 +6,7 @@
 #include "Student_Group_Deanery.h"
 using namespace std;
 
-Deanery(){};
+
 	void createStudents(){
 		char buff1[50];
 		ifstream fin("students.txt");
