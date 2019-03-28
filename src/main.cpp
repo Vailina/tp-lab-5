@@ -5,7 +5,7 @@
 using namespace std;
 int main()
 	{
-		setlocale(LC_ALL, "rus");
+		//setlocale(LC_ALL, "rus");
 		srand(time(NULL));
 		Deanery Dean;
 		Dean.createStudents();
