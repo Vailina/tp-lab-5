@@ -6,7 +6,9 @@
 
 using namespace std;
 
-	Group::Group(string gr_name) : title(gr_name),num(0){}
+	Group::Group(string gr_name){
+		title=gr_name;
+	}
 
 	void Group::addStudent(Student *st){
 		students.push_back(st);
