@@ -48,7 +48,6 @@ private:
 	int ID = 0;
 	int num_stud = 0;
 public:
-	Deanery(){};
 	void createStudents();
 	void createGroups();
 	void addMarks();
