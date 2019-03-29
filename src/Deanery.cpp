@@ -17,7 +17,7 @@ using namespace std;
 		}
 		fin.close();
 	}
-	void createGroups(){
+	void Deanery::createGroups(){
 		
 		char buff2[10];
 		ifstream fin("groups.txt");
@@ -30,7 +30,7 @@ using namespace std;
 		}
 		fin.close();
 	}
-	void addMarks(int num){
+	void Deanery::addMarks(int num){
 		for (int j = 0; j < num_stud; j++){
 			for (int i = 0; i < num; i++){
 				students[j]->addMark(rand() % 10);
@@ -38,12 +38,12 @@ using namespace std;
 		}
 		
 	}
-	void chooseHeads() {
+	void Deanery::chooseHeads() {
 		for (int i = 0; i < groups.size(); i++) {
 			groups[i]->chooseHead();
 		}
 	}
-	void changeGroup(string group_name, string student_name){
+	void Deanery::changeGroup(string group_name, string student_name){
 		int i = 0, j=0;
 		
 		while (group_name != groups[j]->title){
@@ -54,7 +54,7 @@ using namespace std;
 		groups[j]->addStudent(students[i]);
 		present_gr->exceptionStudent(students[i]->fio);
 	}
-	void exceptionStudent() {
+	void Deanery::exceptionStudent() {
 		for (int i = 0; i < num_stud; i++) {
 			if (students[i]->countAverageMark() < 4) {
 				students[i]->group->exceptionStudent(students[i]->fio); 
@@ -64,7 +64,7 @@ using namespace std;
 			}
 		}
 	}
-	void getStatistic(){
+	void Deanery::getStatistic(){
 		ofstream fout("statistic.txt");
 		for (int j = 0; j < groups.size(); j++){
 			vector <vector<string>> list_marks(11);
@@ -91,7 +91,7 @@ using namespace std;
 			}			
 		}		
 	}
-	void saveData(){
+	void Deanery::saveData(){
 		ofstream fout("Lists.txt");
 		for (int j = 0; j < groups.size(); j++){
 			fout <<"Группа:"<< groups[j]->title << endl;
@@ -107,7 +107,7 @@ using namespace std;
 		}	
 		fout.close();
 	}
-	void printData(){
+	void Deanery::printData(){
 		for (int j = 0; j < groups.size(); j++){
 			cout << "Группа:" << groups[j]->title << endl;
 			cout << "Староста: " << groups[j]->head->fio << endl;
