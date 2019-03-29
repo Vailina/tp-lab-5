@@ -50,7 +50,7 @@ private:
 public:
 	void createStudents();
 	void createGroups();
-	void addMarks();
+	void addMarks(int num);
 	void chooseHeads();
 	void changeGroup(string group_name, string student_name);
 	void exceptionStudent();
