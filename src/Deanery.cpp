@@ -7,7 +7,7 @@
 using namespace std;
 
 
-	void createStudents(){
+	void Deanery::createStudents(){
 		char buff1[50];
 		ifstream fin("students.txt");
 		while (fin.getline(buff1, 50)){
