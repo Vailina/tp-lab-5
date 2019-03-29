@@ -6,7 +6,7 @@
 
 using namespace std;
 
-	Student(char* name, int i){
+	Student::Student(char* name, int i){
 		fio = name;
 		id = i;
 	}
