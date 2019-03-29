@@ -31,7 +31,7 @@ private:
 	int num;//количество студентов в группе
 	Student *head; //ссылка на старосту(из членов группы)
 public:
-	Group(string gr_name) : title(gr_name),num(0);
+	Group(string gr_name) : title(gr_name),num(0){};
 	void addStudent(Student *st);
 	int countAverageMarkInGroup();
 	Student* chooseHead();
