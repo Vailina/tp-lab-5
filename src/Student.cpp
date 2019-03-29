@@ -10,14 +10,14 @@ using namespace std;
 		fio = name;
 		id = i;
 	}
-	void assignmentStudent(Group *gr){
+	void Student::assignmentStudent(Group *gr){
 		group = gr;
 	}
-	void addMark(int score){
+	void Student::addMark(int score){
 		marks.push_back(score);
 		num++;
 	}
-	int countAverageMark(){
+	int Student::countAverageMark(){
 		int aver=0;
 		for (int i = 0; i < num; i++){
 			aver += marks[i];
