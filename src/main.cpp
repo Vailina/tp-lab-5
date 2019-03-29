@@ -10,7 +10,7 @@ int main()
 		Deanery Dean;
 		Dean.createStudents();
 		Dean.createGroups();
-		Dean.addMarks();
+		Dean.addMarks(5);
 		Dean.chooseHeads();
 		Dean.changeGroup("18УБ-2", "Пустохин Прокл Карлович");
 		Dean.printData();
