@@ -30,9 +30,9 @@ using namespace std;
 		}
 		fin.close();
 	}
-	void addMarks(){
+	void addMarks(int num){
 		for (int j = 0; j < num_stud; j++){
-			for (int i = 0; i < N; i++){
+			for (int i = 0; i < num; i++){
 				students[j]->addMark(rand() % 10);
 			}
 		}
