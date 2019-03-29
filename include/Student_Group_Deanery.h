@@ -28,10 +28,10 @@ class Group{
 private:
 	string title; //название группы
 	vector <Student*> students; //массив из ссылок на студентов
-	int num;//количество студентов в группе
+	int num=0;//количество студентов в группе
 	Student *head; //ссылка на старосту(из членов группы)
 public:
-	Group(string gr_name) : title(gr_name),num(0){};
+	Group(string gr_name);
 	void addStudent(Student *st);
 	int countAverageMarkInGroup();
 	Student* chooseHead();
