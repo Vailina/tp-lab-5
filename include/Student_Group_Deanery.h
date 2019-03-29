@@ -17,7 +17,7 @@ private:
 	vector <int> marks;// массив оценок
 	int num=0;// количество оценок
 public:
-	Student(char* name, int i){};
+	Student(char* name, int id);
 	void assignmentStudent(Group *gr);
 	void addMark(int score);
 	int countAverageMark();
