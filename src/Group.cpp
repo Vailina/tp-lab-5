@@ -8,12 +8,12 @@ using namespace std;
 
 	Group(string gr_name) : title(gr_name),num(0){}
 
-	void addStudent(Student *st){
+	void Group::addStudent(Student *st){
 		students.push_back(st);
 		num++;
 	}
 
-	int countAverageMarkInGroup(){
+	int Group::countAverageMarkInGroup(){
 		int aver_gr=0;
 		for (int i = 0; i < num; i++){
 			aver_gr+=students[i]->countAverageMark();
@@ -21,13 +21,13 @@ using namespace std;
 		aver_gr /= num;
 		return aver_gr;
 	}
-	Student* chooseHead() {
+	Student* Group::chooseHead() {
 		int i = rand() % (num - 1);
 		head = students[i];
 		return students[i];
 	}
 
-	Student* searchStFio(string name) {
+	Student* Group::searchStFio(string name) {
 		for (int i = 0; i < num; i++) {
 			if (students[i]->fio == name){
 				return students[i];
@@ -35,14 +35,14 @@ using namespace std;
 		}
 	}
 
-	Student* searchStId(int numid) {
+	Student* Group::searchStId(int numid) {
 		for (int i = 0; i < num; i++) {
 			if (students[i]->id == numid) {
 				return students[i];
 			}
 		}
 	}
-	void exceptionStudent(string name) {
+	void Group::exceptionStudent(string name) {
 		for (int i = 0; i < num; i++) {
 			if (students[i]->fio == name) {
 				if (students[i] == head) {
